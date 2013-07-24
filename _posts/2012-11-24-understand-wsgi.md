@@ -24,9 +24,11 @@ WSGI是更高一个层次的概念，对传统CGI做了一层封装，定义了�
 
 
 # 区别
-以上几个*GI都不代表一个可用的实体，也不是一组API或者模块，它们都是server和web app之间交互的规范和协议。
+
+以上几个 xxGI 都不代表一个可用的实体，也不是一组API或者模块，它们都是server和web app之间交互的规范和协议。
 
 Web Server执行web app的几种方式:
+
 * fork-and-excute
 
 * 嵌入式: mod_wsgi/mod_python(mod_python已过时) + webserver，将python解释器嵌入server，调用web app时由server进程执行app内容，而不用产生子进程。
@@ -38,14 +40,15 @@ Web Server执行web app的几种方式:
 虽然工作方式不同，但是这些CGI(这里统称为cgi)并不互相冲突，完全可以协同工作，比如在Django中：
 Apache --> mod_fastcgi --> flup(via CGI protocol) --> Django(via WSGI protocol)
 
-* 注：flup是python中的实现了WSGI协议的一个模块， "这里":http://wiki.python.org/moin/WSGIImplementations 有更过其他的实现WSGI协议的模块。 *
+*注：flup是python中的实现了WSGI协议的一个模块， [这里](http://wiki.python.org/moin/WSGIImplementations)有其他的实现WSGI协议的模块。*
 
 一些链接：
-"how-python-web-frameworks-wsgi-and-cgi-fit-together":http://stackoverflow.com/questions/219110/how-python-web-frameworks-wsgi-and-cgi-fit-together
-"is-there-a-speed-difference-between-wsgi-and-fcgi":http://stackoverflow.com/questions/1747266/is-there-a-speed-difference-between-wsgi-and-fcgi
-"whats-the-difference-between-scgi-and-wsgi":http://stackoverflow.com/questions/257481/whats-the-difference-between-scgi-and-wsgi
+[how-python-web-frameworks-wsgi-and-cgi-fit-together](http://stackoverflow.com/questions/219110/how-python-web-frameworks-wsgi-and-cgi-fit-together)
+[is-there-a-speed-difference-between-wsgi-and-fcgi](http://stackoverflow.com/questions/1747266/is-there-a-speed-difference-between-wsgi-and-fcgi)
+[whats-the-difference-between-scgi-and-wsgi](http://stackoverflow.com/questions/257481/whats-the-difference-between-scgi-and-wsgi)
 
 什么是WSGI？
+
 > WSGI is the Web Server Gateway Interface. It is a specification for web servers and application servers to communicate with web applications (though it can also be used for more than that). It is a Python standard, described in detail in PEP 333.
 
 > WSGI是一个提供给WEB服务器和Web App应用程序之间通信的接口。
@@ -54,7 +57,7 @@ Apache --> mod_fastcgi --> flup(via CGI protocol) --> Django(via WSGI protocol)
 
 > Middleware are reusable components providing generic services normally handled by frameworks; e.g., a Session object, a Request object, error handling. They're implemented as wrapper functions; Inbound（对内） they can add keys to the dictionary (e.g., quixote.request for a Quixote-style Request object). Outbound（对外） they can modify HTTP headers or translate the body into Latin or Marklar.
 
-WSGI中，分为三个概念： WSGI Server/Gateway <--> [Middleware] <--> Python application/framwork
+WSGI中，分为三个概念： WSGI Server/Gateway <--> Middleware <--> Python application/framwork
 
 WSGI 以回调的方式工作，application/framework 需要提供给Server/Gateway一个可以调用的(callable)对象(函数、类等包含__call__()属性的对象)，Server/Gateway每次收到请求都会调用这个形式的对象:
 
@@ -141,7 +144,7 @@ mod_wsgi是apache中的一个模块，这个模块能够支持运行任何提供
 
 	import os
 	import sys
-	os.environ['DJANGO_SETTINGS_MODULE']='mysite.settings'
+	os.environ\['DJANGO_SETTINGS_MODULE'\]='mysite.settings'
 
 	import django.core.handlers.wsgi
 	application = django.core.handlers.wsgi.WSGIHandler()</code></pre>
