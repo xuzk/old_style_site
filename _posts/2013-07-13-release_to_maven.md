@@ -114,7 +114,7 @@ pom.xml文件中一般需要以下配置：
 
 ### 使用GPG对java项目包进行签名[官方说明](https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven)
 
-    > gpg --key-gen                 // 填写一系列信息后生成一对公密钥，这期间需要手动输入一个passphrase密码，后面签名时会用到
+    > gpg --gen-key                 // 填写一系列信息后生成一对公密钥，这期间需要手动输入一个passphrase密码，后面签名时会用到
 
     > gpg --list-keys               // 列出生成的key信息
     /home/coaku/.gnupg/pubring.gpg
