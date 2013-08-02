@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://coaku.com/</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2013/07/31/lru_cache.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2013/07/21/html_redirect.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2013/07/15/domain_check.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2013/07/13/release_to_maven.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2012/11/24/understand-wsgi.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2012/11/24/mod_wsgi_problem.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+<url>
+  <loc>http://coaku.com/2012/11/14/dot_syntax.html</loc>
+  <lastmod>2013-08-02T07:20:29+00:00</lastmod>
+</url>
+</urlset>
